@@ -28,7 +28,7 @@ We can also **_do both_**.
 
 Clickable link: <https://example.com>.  
 Email as well: <nospam@example.com>.  
-Link with customized text: [CLICK ME!](/).
+Link with customized text: [CLICK ME!](/images/rick.gif).
 
 Reference test:  
 A planet is any of the large bodies that orbit the [Sun][], including [Mercury][1], [Venus][2], [Earth][3], [Mars][4], [Jupiter][5], [Saturn][6], [Uranus][7], and [Neptune][8], in order of closeness to the Sun.
