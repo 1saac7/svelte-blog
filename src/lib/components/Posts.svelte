@@ -3,7 +3,7 @@
     export let posts
 </script>
 
-<div>
+<div class="post-list">
     <h1>Posts</h1>
 
     <ul>
@@ -17,3 +17,11 @@
         {/each}
     </ul>
 </div>
+
+<style>
+    @media (max-width: 857px) {
+        .post-list a {
+            text-decoration: underline;
+        }
+    }
+</style>

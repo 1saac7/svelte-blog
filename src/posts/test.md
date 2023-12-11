@@ -1,6 +1,7 @@
 ---
 title: Basic test
 date: 1970-01-01
+latex: True
 ---
 
 # Basic test

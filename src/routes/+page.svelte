@@ -5,7 +5,8 @@
 </script>
 
 <svelte:head>
-    <title>1saac's Blog</title>
+    <title>Isaac's Blog</title>
+    <meta name="description" content="Home page of Isaac's svelte blog" />
 </svelte:head>
 
 <div>

@@ -3,14 +3,6 @@
     import Footer from '$lib/components/Footer.svelte'
 </script>
 
-<svelte:head>
-    <script
-        id="MathJax-script"
-        async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-    ></script>
-</svelte:head>
-
 <div class="markdown-body overflow">
     <div class="container">
         <div class="main-footer">
