@@ -18,6 +18,8 @@
     />
 </svelte:head>
 
+<br />
+
 <article>
     {@html post.content}
 </article>
