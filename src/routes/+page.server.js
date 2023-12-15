@@ -17,8 +17,8 @@ export async function load() {
         })
     posts.sort(
         (a, b) =>
-            dayjs(b.metadata.date, 'MMM D, YYYY') -
-            dayjs(a.metadata.date, 'MMM D, YYYY')
+            dayjs(a.metadata.date, 'MMM D, YYYY') -
+            dayjs(b.metadata.date, 'MMM D, YYYY')
     )
     return {
         posts,

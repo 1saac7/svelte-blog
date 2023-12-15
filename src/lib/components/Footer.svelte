@@ -1,6 +1,6 @@
 <footer>
     <div class="footer">
-        <div class="msg">© 2024 1saac7. With a 😵‍💫 mind at 2 AM.</div>
+        <div class="msg">© 2024 Isaac Liang. With a 😵‍💫 mind at 2 AM.</div>
 
         <div class="msg">
             <a href="https://creativecommons.org/licenses/by-sa/4.0/">
