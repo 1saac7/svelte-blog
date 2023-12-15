@@ -1,6 +1,7 @@
 ---
 title: Long test
 date: 2023-06-30
+hidden: True
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non purus quis turpis maximus auctor. Vestibulum pellentesque lorem enim. Nunc tempus congue sapien a rhoncus. Donec feugiat, nibh et dapibus hendrerit, orci elit sollicitudin eros, sed facilisis justo nibh non purus. Quisque semper, enim et eleifend laoreet, libero ipsum tempor urna, et euismod lectus diam eget elit. Sed nisl mauris, accumsan sit amet rutrum eu, egestas ut mi. Nulla facilisi. Morbi dignissim ligula facilisis urna tempor ornare. Aenean sed ex blandit, venenatis justo eget, blandit magna. Vivamus purus odio, venenatis nec felis quis, sodales pulvinar est. Morbi vitae aliquet sapien, vitae condimentum erat. Mauris imperdiet vitae enim sollicitudin porta. Phasellus pellentesque est nec neque porttitor, vel condimentum leo pharetra. Sed libero purus, pulvinar vel nulla ut, scelerisque tempor lacus.
