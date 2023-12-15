@@ -1,6 +1,6 @@
 <script>
     export let data
-    const post = JSON.parse(data.post)
+    $: post = JSON.parse(data.post)
 </script>
 
 <svelte:head>
@@ -26,4 +26,6 @@
 
 <br />
 
-<p align="right"><small>Published on {post.metadata.date2}</small></p>
+{#if !post.metadata.hide_publish_time}
+    <p align="right"><small>Published on {post.metadata.date2}</small></p>
+{/if}
