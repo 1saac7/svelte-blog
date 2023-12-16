@@ -3,8 +3,6 @@ title: 📄 More info about this site
 date: 2023-12-14
 ---
 
-# More info about this site
-
 Test pages:
 
 -   [Basic test](/blog/test-basic)
@@ -49,11 +47,12 @@ src
 
 Markdown post frontmatter format:
 
-| Key                 | Default value | Notes                                     |
-| :------------------ | :-----------: | :---------------------------------------- |
-| `title`             |      NA       | Necessary                                 |
-| `date`              |      NA       | Necessary                                 |
-| `hidden`            |    `False`    | Set to `True` to hide post from home page |
-| `hide-publish-date` |    `False`    | Set to `True` to hide publish date        |
+| Key          | Type      | Notes                                                               |
+| :----------- | :-------- | :------------------------------------------------------------------ |
+| `title`      | `string`  | Necessary, post title                                               |
+| `date`       | `boolean` | Necessary, published date                                           |
+| `hidden`     | `boolean` | Optional, set to `True` to hide post from home page                 |
+| `hide_title` | `boolean` | Optional, set to `True` to hide title at the beginning of a post    |
+| `hide_date`  | `boolean` | Optional, set to `True` to hide published date at the end of a post |
 
 Feel free to use, modify, upgrade, and share this project. To deploy, copy the [repo](https://github.com/1saac7/svelte-blog) and follow the instruction from [SvelteKit Docs](https://kit.svelte.dev/docs/introduction).

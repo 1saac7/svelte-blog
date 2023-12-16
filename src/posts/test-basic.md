@@ -1,11 +1,8 @@
 ---
 title: Basic test
 date: 1970-01-01
-latex: True
 hidden: True
 ---
-
-# Basic test
 
 ## Section 1
 

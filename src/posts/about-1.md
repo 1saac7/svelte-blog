@@ -1,6 +1,7 @@
 ---
 title: 👋 Hi there
 date: 2023-12-14
+hide_title: True
 ---
 
 Hi,

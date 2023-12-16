@@ -2,7 +2,8 @@
 title: Code test
 date: 2023-12-01
 hidden: True
-hide_publish_time: True
+hide_title: True
+hide_date: True
 ---
 
 ## C++ Example
