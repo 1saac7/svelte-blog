@@ -13,12 +13,12 @@
 <style>
     .container {
         margin: 0 auto;
-        padding: 0 20px 0 20px;
-        max-width: 856px;
+        padding: 2vh 20px 0 20px;
+        max-width: 756px;
         min-width: 200px;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        min-height: 98vh;
     }
 
     .main {

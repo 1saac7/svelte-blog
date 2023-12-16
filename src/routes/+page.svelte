@@ -9,8 +9,6 @@
     <meta name="description" content="Home page of Isaac's svelte blog" />
 </svelte:head>
 
-<br />
-
 <div>
     <About />
     <Posts posts={data.posts} />
