@@ -14,7 +14,7 @@
     .container {
         margin: 0 auto;
         padding: 2vh 20px 0 20px;
-        max-width: 756px;
+        max-width: 768px;
         min-width: 200px;
         display: flex;
         flex-direction: column;

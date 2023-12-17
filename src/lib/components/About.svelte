@@ -1,2 +1,6 @@
-<h1>Isaac's blog</h1>
+<script>
+    import { siteData } from '$lib/js/config'
+</script>
+
+<h1>{siteData.siteName}</h1>
 <p>✏️ Articles, 🔨 Technology, 📷 Photography, and Love ❤️</p>

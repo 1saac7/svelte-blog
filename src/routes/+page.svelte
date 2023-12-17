@@ -1,12 +1,13 @@
 <script>
+    import { siteData } from '$lib/js/config'
     import About from '$lib/components/About.svelte'
     import Posts from '$lib/components/Posts.svelte'
     export let data
 </script>
 
 <svelte:head>
-    <title>Isaac's Blog</title>
-    <meta name="description" content="Home page of Isaac's svelte blog" />
+    <title>{siteData.siteName}</title>
+    <meta name="description" content={siteData.description} />
 </svelte:head>
 
 <div>
