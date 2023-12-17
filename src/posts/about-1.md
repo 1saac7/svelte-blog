@@ -1,6 +1,8 @@
 ---
-title: 👋 Hi there
+emoji: 👋
+title: Hi there
 date: 2023-12-14
+description: Isaac's first blog post, an introduction about how this site is created.
 hide_title: True
 ---
 

@@ -4,24 +4,34 @@
 </script>
 
 <div class="post-list">
-    <h1>Posts</h1>
+    <h3>Posts</h3>
 
     <ul>
         {#each posts as post}
             {#if !post.metadata.hidden}
-                <li>
-                    <a href={`${base}/blog/${post.slug}`}>
-                        {post.metadata.date} -
-                        {post.metadata.title}
-                    </a>
-                </li>
+                {#if post.metadata.emoji}
+                    <li>
+                        <a href={`${base}/blog/${post.slug}`}>
+                            {post.metadata.date} -
+                            {post.metadata.emoji}
+                            {post.metadata.title}
+                        </a>
+                    </li>
+                {:else}
+                    <li>
+                        <a href={`${base}/blog/${post.slug}`}>
+                            {post.metadata.date} -
+                            {post.metadata.title}
+                        </a>
+                    </li>
+                {/if}
             {/if}
         {/each}
     </ul>
 </div>
 
 <style>
-    @media (max-width: 857px) {
+    @media (max-width: 768px) {
         .post-list a {
             text-decoration: underline;
         }

@@ -1,5 +1,6 @@
 ---
-title: 📄 More info about this site
+emoji: 📄
+title: More info about this site
 date: 2023-12-14
 ---
 
