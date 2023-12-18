@@ -2,6 +2,8 @@
 emoji: 📄
 title: More info about this site
 date: 2023-12-14
+description: A brief summary about the technical details of this Svelte based blogging site, written by Isaac Liang.
+hide_date: True
 ---
 
 Test pages:
@@ -32,6 +34,7 @@ src
 │   │   └── Posts.svelte
 │   ├── github-markdown.css
 │   └── js
+│       ├── config.js
 │       └── parser.js
 ├── posts
 │   └── test.md
@@ -48,12 +51,14 @@ src
 
 Markdown post frontmatter format:
 
-| Key          | Type      | Notes                                                               |
-| :----------- | :-------- | :------------------------------------------------------------------ |
-| `title`      | `string`  | Necessary, post title                                               |
-| `date`       | `boolean` | Necessary, published date                                           |
-| `hidden`     | `boolean` | Optional, set to `True` to hide post from home page                 |
-| `hide_title` | `boolean` | Optional, set to `True` to hide title at the beginning of a post    |
-| `hide_date`  | `boolean` | Optional, set to `True` to hide published date at the end of a post |
+| Key           | Type        | Notes                                                                              |
+| :------------ | :---------- | :--------------------------------------------------------------------------------- |
+| `title`       | `string`    | Necessary, post title, also used as SEO (meta tag) if `description` below is empty |
+| `date`        | `timestamp` | Necessary, published date                                                          |
+| `description` | `string`    | Optional, description for SEO (meta tag)                                           |
+| `emoji`       | `string`    | Optional, emoji displayed together with post title on home page                    |
+| `hidden`      | `boolean`   | Optional, set to `True` to hide post from home page                                |
+| `hide_title`  | `boolean`   | Optional, set to `True` to hide title at the beginning of a post                   |
+| `hide_date`   | `boolean`   | Optional, set to `True` to hide published date at the end of a post                |
 
 Feel free to use, modify, upgrade, and share this project. To deploy, copy the [repo](https://github.com/1saac7/svelte-blog) and follow the instruction from [SvelteKit Docs](https://kit.svelte.dev/docs/introduction).
