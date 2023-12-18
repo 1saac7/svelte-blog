@@ -1,13 +1,15 @@
 <script>
-    import { siteData } from '$lib/js/config'
+    import { siteConfig } from '$lib/js/config'
 </script>
 
 <footer>
     <div class="footer">
-        <div class="msg">© 2024 {siteData.author}. I use Arch Linux.</div>
+        <div class="msg">
+            © 2024 {siteConfig.author}. {siteConfig.footerMsg}
+        </div>
 
         <div class="msg">
-            <a href={siteData.github}> GitHub</a> |
+            <a href={siteConfig.github}> GitHub</a> |
             <a href="https://creativecommons.org/licenses/by-sa/4.0/">
                 CC BY-SA 4.0</a
             >

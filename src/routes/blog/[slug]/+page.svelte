@@ -1,17 +1,17 @@
 <script>
-    import { siteData } from '$lib/js/config'
+    import { siteConfig } from '$lib/js/config'
     export let data
     $: post = JSON.parse(data.post)
 </script>
 
 <svelte:head>
-    <title>{post.metadata.title} • {siteData.siteName}</title>
+    <title>{post.metadata.title} • {siteConfig.siteName}</title>
     {#if post.metadata.description}
         <meta name="description" content={post.metadata.description} />
     {:else}
         <meta
             name="description"
-            content="{post.metadata.title} written by {siteData.author}."
+            content="{post.metadata.title} written by {siteConfig.author}."
         />
     {/if}
 </svelte:head>

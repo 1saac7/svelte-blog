@@ -1,6 +1,6 @@
 <script>
-    import { siteData } from '$lib/js/config'
+    import { siteConfig } from '$lib/js/config'
 </script>
 
-<h1>{siteData.siteName}</h1>
+<h1>{siteConfig.siteName}</h1>
 <p>✏️ Articles, 🔨 Technology, 📷 Photography, and Love ❤️</p>
