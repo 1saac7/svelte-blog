@@ -29,11 +29,3 @@
         {/each}
     </ul>
 </div>
-
-<style>
-    @media (max-width: 768px) {
-        .post-list a {
-            text-decoration: underline;
-        }
-    }
-</style>
