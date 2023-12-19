@@ -16,17 +16,17 @@ export async function GET() {
             theme_color: '#fbfbfb',
             icons: [
                 {
-                    src: '/favicon-192x192.png',
+                    src: '/icons/favicon-192x192.png',
                     sizes: '192x192',
                     type: 'image/png',
                 },
                 {
-                    src: '/favicon-512x512.png',
+                    src: '/icons/favicon-512x512.png',
                     sizes: '512x512',
                     type: 'image/png',
                 },
                 {
-                    src: '/favicon-512-maskable.png',
+                    src: '/icons/favicon-512-maskable.png',
                     type: 'image/png',
                     sizes: '512x512',
                     purpose: 'maskable',
