@@ -12,8 +12,8 @@
         content="#232831"
         media="(prefers-color-scheme: dark)"
     />
-    <link rel="icon" href="%sveltekit.assets%/icons/favicon.ico" />
-    <link rel="apple-touch-icon" href="%sveltekit.assets%/icons/favicon.png" />
+    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icons/favicon.png" />
 
     <link rel="manifest" href="/manifest.webmanifest" />
 </svelte:head>
