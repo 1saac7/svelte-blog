@@ -12,8 +12,8 @@ export async function GET() {
             display: 'standalone',
             orientation: 'portrait',
             categories: ['education', 'blog'],
-            background_color: '#fbfbfb',
-            theme_color: '#fbfbfb',
+            background_color: '#ffffff',
+            theme_color: '#ffffff',
             icons: [
                 {
                     src: '/icons/favicon-192x192.png',

@@ -28,5 +28,5 @@
 
 {#if !post.metadata.hide_date}
     <br />
-    <p align="right"><small>Published on {post.metadata.date2}</small></p>
+    <p align="right"><small>Published on {post.metadata.date}</small></p>
 {/if}

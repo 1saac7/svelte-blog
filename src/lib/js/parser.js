@@ -18,9 +18,9 @@ let parser = unified()
     .use(frontmatter, ['yaml'])
 
 let runner = unified()
-    .use(remark2rehype)
+    .use(remark2rehype, { allowDangerousHtml: true })
     .use(rehypeMathjax)
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .use(rehypeHighlight, { subset: false })
 
 export function process(filename) {
@@ -39,8 +39,7 @@ export function process(filename) {
         metadata = yaml.load(tree.children[0].value)
         tree.children = tree.children.slice(1, tree.children.length)
         if ('date' in metadata) {
-            metadata.date = dayjs(metadata.date).format('MM/DD/YY')
-            metadata.date2 = dayjs(metadata.date).format('MMM D, YYYY')
+            metadata.date = dayjs(metadata.date).format('MMM D, YYYY')
         }
     }
     let content = runner.stringify(runner.runSync(tree))
