@@ -35,7 +35,7 @@
     .footer {
         bottom: 0;
         padding-top: 45px;
-        padding-bottom: 10px;
+        padding-bottom: 0;
     }
 
     .footer a {
