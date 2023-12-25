@@ -5,9 +5,9 @@
 <footer>
     <div class="footer">
         <div class="msg">
-            © 2024 {siteConfig.author}. {siteConfig.footerMsg}
+            © 2024 {siteConfig.author}.
         </div>
-
+        <div class="msg">{siteConfig.footerMsg}</div>
         <div class="msg">
             <a
                 target="_blank"
@@ -29,6 +29,7 @@
 
     .msg {
         display: inline-block;
+        white-space: nowrap;
     }
 
     .footer {
