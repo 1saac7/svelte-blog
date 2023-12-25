@@ -1,9 +1,9 @@
 <script>
     // import '$lib/github-markdown.css'
-    import '$lib/styles/color.css'
-    import '$lib/styles/main.css'
-    import Head from '$lib/components/Head.svelte'
-    import Footer from '$lib/components/Footer.svelte'
+    import "$lib/styles/color.css"
+    import "$lib/styles/main.css"
+    import Head from "$lib/components/Head.svelte"
+    import Footer from "$lib/components/Footer.svelte"
 </script>
 
 <Head />
@@ -19,7 +19,7 @@
     .container {
         margin: 0 auto;
         padding: 2vh 30px 0 30px;
-        max-width: 768px;
+        max-width: 708px;
         min-width: 200px;
         display: flex;
         flex-direction: column;
@@ -28,5 +28,12 @@
 
     .main {
         flex: 1;
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding-right: 16px;
+            padding-left: 16px;
+        }
     }
 </style>

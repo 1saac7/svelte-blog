@@ -1,5 +1,5 @@
 <script>
-    import { siteConfig } from '$lib/js/config'
+    import { siteConfig } from "$lib/js/config"
 </script>
 
 <footer>
@@ -27,10 +27,8 @@
         }
     }
 
-    @media (min-width: 768px) {
-        .msg {
-            display: inline-block;
-        }
+    .msg {
+        display: inline-block;
     }
 
     .footer {
@@ -45,7 +43,7 @@
 
     .footer a[href^="https://"]::after
     {
-        content: '';
+        content: "";
         width: 13px;
         height: 13px;
         margin-left: 4px;
