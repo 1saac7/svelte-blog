@@ -30,6 +30,7 @@
     .msg {
         display: inline-block;
         white-space: nowrap;
+        font-size: smaller;
     }
 
     .footer {

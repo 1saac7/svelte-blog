@@ -25,7 +25,6 @@
         display: block;
         margin-top: 24px;
         margin-bottom: 28px;
-        margin-right: 0.3em;
         line-height: 1.25;
         font-weight: 700;
         font-size: 3em;

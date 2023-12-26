@@ -25,21 +25,15 @@
 
 <style>
     .post-list {
-        margin-top: 3em;
+        margin: 3em 0.2em 0 0.2em;
     }
     .post-list h4 {
-        font-size: 1.1em;
         color: var(--color-accent-subtle);
+        font-variant-caps: all-small-caps;
     }
 
     .post-entry {
-        margin: 0 0 2.5em 0;
-    }
-
-    @media (max-width: 768px) {
-        .post-entry {
-            margin-left: 0.75em;
-        }
+        margin: 0 0 2.2em 0;
     }
 
     .post-entry a {
@@ -59,6 +53,12 @@
         margin-top: 0;
         margin-bottom: 0.2em;
         padding-bottom: 0;
+    }
+
+    @media (max-width: 480px) {
+        .post-entry h3{
+            font-size: 1.35em;
+        }
     }
 
     .post-entry time {
