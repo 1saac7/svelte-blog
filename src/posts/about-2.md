@@ -1,8 +1,8 @@
 ---
-emoji: 📄
 title: More info about this site
 date: 2023-12-14
 description: A brief summary about the technical details of this Svelte based blogging site, written by Isaac Liang.
+hidden: True
 hide_date: True
 ---
 
@@ -20,7 +20,7 @@ CSS based on [sindresorhus/github-markdown-css](https://github.com/sindresorhus/
 
 Markdown parser based on [svelteland/svelte-kit-blog-demo](https://github.com/svelteland/svelte-kit-blog-demo)
 
-Font is [Github Monaspace](https://monaspace.githubnext.com)
+Dark / Light theme follows your system setting, you can change it on the fly.
 
 Project structure:
 
@@ -31,11 +31,15 @@ src
 │   ├── components
 │   │   ├── About.svelte
 │   │   ├── Footer.svelte
-│   │   └── Posts.svelte
-│   ├── github-markdown.css
-│   └── js
-│       ├── config.js
-│       └── parser.js
+│   │   ├── Head.svelte
+│   │   ├── Posts.svelte
+│   │   └── Social.svelte
+│   ├── js
+│   │   ├── config.js
+│   │   └── parser.js
+│   └── styles
+│       ├── color.css
+│       └── main.css
 ├── posts
 │   └── test.md
 └── routes
@@ -43,10 +47,12 @@ src
     ├── +layout.svelte
     ├── +page.server.js
     ├── +page.svelte
-    └── blog
-        └── [slug]
-            ├── +page.server.js
-            └── +page.svelte
+    ├── blog
+    │   └── [slug]
+    │       ├── +page.server.js
+    │       └── +page.svelte
+    └── manifest.webmanifest
+        └── +server.js
 ```
 
 Markdown post frontmatter format:

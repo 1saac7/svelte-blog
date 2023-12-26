@@ -4,7 +4,7 @@ date: 1970-01-01
 hidden: True
 ---
 
-## Section 1
+## Section 1 `hi`
 
 ### Section 1.1
 
@@ -23,7 +23,8 @@ This is a paragraph.
 
 This is **bold text**.  
 Here is _italic ones_.  
-We can also **_do both_**.
+We can also **_do both_**.  
+<s>Don't look at me, I am strikethrough.</s>
 
 Clickable link: <https://example.com>.  
 Email as well: <nospam@example.com>.  
@@ -44,6 +45,16 @@ A planet is any of the large bodies that orbit the [Sun][], including [Mercury][
 
 ## Section 3
 
+### Lists
+
+-   This
+-   Is
+-   A
+    -   list
+    -   list
+    -   list
+-   List
+
 ### Tables
 
 |                  **Example**                  | **LaTex**                                   |
@@ -63,6 +74,8 @@ A planet is any of the large bodies that orbit the [Sun][], including [Mercury][
 > \- Abraham Lincoln, _The Gettysburg Address_
 
 ### Code blocks
+
+<kbd>Cmd</kbd> + <kbd>w</kbd>
 
 ```c
 #include <stdio.h>

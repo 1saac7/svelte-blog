@@ -9,7 +9,7 @@ hide_date: True
 ## C++ Example
 
 ```cpp
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int factorial(int n);
@@ -60,6 +60,7 @@ if num < 0:
     print("Invalid input!")
 else:
     print("The factorial of", num, "is", factorial(num))
+
 ```
 
 ## Javascript Example
@@ -111,27 +112,22 @@ if (num < 0) {
 ```css
 /* Use local font */
 @font-face {
-    font-family: 'MonaspaceRadon';
-    src: url('/fonts/MonaspaceRadonVarVF.woff2') format('woff2');
+    font-family: 'Figtree';
+    src: url('/fonts/Figtree.ttf') format(truetype);
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
 }
 
-.markdown-body {
+body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    margin: 0;
     color: var(--color-fg-default);
     background-color: var(--color-canvas-default);
-    font-family: 'MonaspaceRadon'; /* Use local font */
-    font-size: 16px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 18px;
     line-height: 1.5;
     word-wrap: break-word;
-}
-
-@media (prefers-color-scheme: dark) {
-    .markdown-body {
-        color-scheme: dark;
-        --color-fg-default: #c9d1d9;
-    }
 }
 ```
 
