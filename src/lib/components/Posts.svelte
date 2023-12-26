@@ -4,7 +4,7 @@
 </script>
 
 <div class="post-list">
-    <h4>posts</h4>
+    <h4>POSTS</h4>
 
     {#each posts as post}
         {#if !post.metadata.hidden}
@@ -25,18 +25,19 @@
 
 <style>
     .post-list {
-        margin-top: 3em;
+        margin-top: 2.8em;
     }
 
     .post-list h4 {
+        padding-left: 4px;
         color: var(--color-accent-subtle);
-        font-variant-caps: all-small-caps;
-        font-size: 1.25em;
+        font-size: 1.05em;
+        font-weight: 600;
     }
 
     .post-entry {
         margin: 0 0 2.2em 0;
-        padding: 0 8px;
+        padding-left: 8px;
     }
 
     .post-entry a {
@@ -51,7 +52,7 @@
 
     .post-entry h3 {
         display: inline-block;
-        font-size: 1.5em;
+        font-size: 1.43em;
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 0.2em;

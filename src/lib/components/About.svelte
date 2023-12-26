@@ -1,14 +1,14 @@
 <script>
-    import { siteConfig } from "$lib/js/config"
+    import { siteConfig } from '$lib/js/config'
     var nameArray = siteConfig.siteName.split(/(\s+)/)
-    var firstWord = ""
-    var rest = ""
+    var firstWord = ''
+    var rest = ''
     if (nameArray.length < 2) {
         firstWord = nameArray[0]
     } else {
         firstWord = nameArray[0]
         for (let i = 2; i < nameArray.length; i++) {
-            rest = rest.concat(" ", nameArray[i])
+            rest = rest.concat(' ', nameArray[i])
         }
     }
 </script>
@@ -23,7 +23,7 @@
 <style>
     .title {
         display: block;
-        margin-top: 24px;
+        margin-top: 0.9em;
         margin-bottom: 28px;
         line-height: 1.25;
         font-weight: 700;
@@ -33,7 +33,7 @@
     .first-word::before {
         position: absolute;
         top: 0;
-        content: "";
+        content: '';
         background-image: url('/icons/whale.svg');
         background-repeat: no-repeat;
         background-position: 0 1.65em;
