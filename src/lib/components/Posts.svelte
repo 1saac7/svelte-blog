@@ -25,7 +25,7 @@
 
 <style>
     .post-list {
-        margin-top: 3.3em;
+        margin-top: 3em;
     }
     .post-list h4 {
         font-size: 1.1em;
@@ -54,8 +54,8 @@
 
     .post-entry h3 {
         display: inline-block;
-        font-size: 1.5em;
-        font-weight: 600;
+        font-size: 1.45em;
+        font-weight: 700;
         margin-top: 0;
         margin-bottom: 0.2em;
         padding-bottom: 0;
