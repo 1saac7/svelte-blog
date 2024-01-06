@@ -27,6 +27,10 @@
         }
     }
 
+    .footer {
+        margin-bottom: 6px;
+    }
+
     .msg {
         display: inline-block;
         white-space: nowrap;
