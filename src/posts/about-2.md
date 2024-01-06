@@ -10,6 +10,7 @@ Test pages:
 
 -   [Basic test](/blog/test-basic)
 -   [Long test](/blog/test-long)
+-   [Short test](/blog/test-short)
 -   [Code test](/blog/test-code)
 
 Site source code license: [MIT](https://opensource.org/license/mit/)
