@@ -32,7 +32,7 @@
     }
 
     .empty-space {
-        margin: 0 auto 4em auto;
+        margin: 0 auto calc(4em + 100lvh - 100dvh) auto;
     }
 
     @media (max-width: 768px) {
