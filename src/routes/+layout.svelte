@@ -28,7 +28,7 @@
     .main {
         flex: 1;
         min-height: calc(100svh - 2em);
-        margin-bottom: calc(100svh - 100dvh);
+        margin-bottom: calc(100dvh - 100lvh);
     }
 
     .empty-space {
