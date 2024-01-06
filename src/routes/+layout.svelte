@@ -28,12 +28,11 @@
     .main {
         flex: 1;
         min-height: calc(100dvh - 2em);
-        /* margin-bottom: calc(100dvh - 100lvh); */
         margin-bottom: 0;
     }
 
     .empty-space {
-        margin: 0 auto calc(4em + 100lvh - 100dvh) auto;
+        margin: 0 auto 4em auto;
     }
 
     @media (max-width: 768px) {
@@ -57,7 +56,7 @@
         }
 
         .main {
-            min-height: calc(100dvh - 3.5em);
+            min-height: calc(100dvh - 4em);
         }
     }
 </style>
