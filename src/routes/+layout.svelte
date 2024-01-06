@@ -56,7 +56,7 @@
         }
 
         .main {
-            min-height: calc(100vh - 3.5em);
+            min-height: calc(100svh - 3.5em);
         }
     }
 </style>
