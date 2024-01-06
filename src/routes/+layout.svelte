@@ -27,7 +27,7 @@
 
     .main {
         flex: 1;
-        min-height: calc(100vh - 2em);
+        min-height: calc(100svh - 2em);
     }
 
     .empty-space {

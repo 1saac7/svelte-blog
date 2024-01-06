@@ -20,7 +20,6 @@
     <h1>{post.metadata.title}</h1>
 {:else}
     <br />
-    <br />
 {/if}
 
 <article>
