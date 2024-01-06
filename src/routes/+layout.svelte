@@ -18,7 +18,7 @@
 <style>
     .container {
         margin: 0 auto;
-        padding: 24px 30px 0 30px;
+        padding: 8px 64px 0 64px;
         max-width: 768px;
         min-width: 200px;
         display: flex;
@@ -28,11 +28,24 @@
     .main {
         flex: 1;
         min-height: calc(100vh - 2em);
-        margin-bottom: -0.9em;
     }
 
     .empty-space {
         margin: 0 auto 4em auto;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 
     @media (max-width: 414px) {
