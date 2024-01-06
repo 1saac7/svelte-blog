@@ -1,5 +1,4 @@
 <script>
-    // import '$lib/github-markdown.css'
     import '$lib/styles/color.css'
     import '$lib/styles/main.css'
     import Head from '$lib/components/Head.svelte'
@@ -11,6 +10,7 @@
 <div class="markdown-body container">
     <main class="main">
         <slot />
+        <div class="empty-space" />
     </main>
     <Footer />
 </div>
@@ -18,21 +18,31 @@
 <style>
     .container {
         margin: 0 auto;
-        padding: 0 30px 0 30px;
-        max-width: 708px;
+        padding: 24px 30px 0 30px;
+        max-width: 768px;
         min-width: 200px;
         display: flex;
         flex-direction: column;
-        min-height: 99vh;
     }
 
     .main {
         flex: 1;
+        min-height: calc(100vh - 2em);
+        margin-bottom: -0.9em;
     }
 
-    @media (max-width: 480px) {
+    .empty-space {
+        margin: 0 auto 4em auto;
+    }
+
+    @media (max-width: 414px) {
         .container {
-            padding: 0 16px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .main {
+            min-height: calc(100vh - 3.5em);
         }
     }
 </style>

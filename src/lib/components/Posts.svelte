@@ -52,7 +52,7 @@
 
     .post-entry h3 {
         display: inline-block;
-        font-size: 1.43em;
+        font-size: 1.4em;
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 0.2em;

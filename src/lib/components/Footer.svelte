@@ -1,5 +1,5 @@
 <script>
-    import { siteConfig } from "$lib/js/config"
+    import { siteConfig } from '$lib/js/config'
 </script>
 
 <footer>
@@ -33,19 +33,13 @@
         font-size: smaller;
     }
 
-    .footer {
-        bottom: 0;
-        padding-top: 45px;
-        padding-bottom: 0;
-    }
-
     .footer a {
         text-decoration: none;
     }
 
     .footer a[href^="https://"]::after
     {
-        content: "";
+        content: '';
         width: 13px;
         height: 13px;
         margin-left: 4px;

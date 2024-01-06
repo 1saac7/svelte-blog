@@ -32,7 +32,7 @@
 
     .first-word::before {
         position: absolute;
-        top: 0;
+        top: 24px;
         content: '';
         background-image: url('/icons/whale.svg');
         background-repeat: no-repeat;

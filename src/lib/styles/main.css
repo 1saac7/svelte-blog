@@ -17,6 +17,7 @@ html,
 body {
    margin: 0;
    padding: 0;
+   height: 100%;
 }
 
 body {
@@ -117,14 +118,14 @@ a {
    color: var(--color-fg-default);
    text-decoration: underline;
    text-decoration-color: var(--color-fg-default);
-   text-decoration-thickness: 0.5px;
-   text-underline-offset: 4.7px;
+   text-decoration-thickness: 0.75px;
    transition: text-decoration-color 200ms, text-decoration-thickness 200ms;
 }
 
 a:hover {
    text-decoration-color: var(--color-accent-subtle);
-   text-decoration-thickness: 3px;
+   text-decoration-thickness: 3.5px;
+   text-decoration-skip-ink: none;
 }
 
 a:not([href]) {
