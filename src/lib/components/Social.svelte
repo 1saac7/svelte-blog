@@ -49,6 +49,21 @@
             >
         </a>
     {/if}
+
+    {#if siteConfig.social_unsplash}
+        <a
+            href={siteConfig.social_unsplash}
+            target="_blank"
+            rel="noopener noreferrer me"
+            title="Unsplash profile"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"
+                />
+            </svg>
+        </a>
+    {/if}
 </div>
 
 <style>
@@ -68,7 +83,7 @@
         display: inline-block;
         width: 28px;
         height: 28px;
-        margin: 0 6px 0 2px;
+        margin: 0 8px 0 2px;
         overflow: visible !important;
         vertical-align: text-bottom;
         fill: currentColor;

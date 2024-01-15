@@ -9,4 +9,5 @@ export const siteConfig = {
     social_github: 'https://github.com/1saac7/svelte-blog',
     social_email: '',
     social_rss: '',
+    social_unsplash: 'https://unsplash.com/@1saac7',
 }
