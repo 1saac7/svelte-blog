@@ -9,14 +9,25 @@
     {#each posts as post}
         {#if !post.metadata.hidden}
             <div class="post-entry">
-                <a href={`${base}/blog/${post.slug}`}>
-                    <h3>
-                        {#if post.metadata.emoji}
-                            {post.metadata.emoji}
-                        {/if}
-                        {post.metadata.title}
-                    </h3>
-                </a>
+                {#if post.metadata.gallery}
+                    <a href={`${base}/photo/${post.slug}`}>
+                        <h3>
+                            {#if post.metadata.emoji}
+                                {post.metadata.emoji}
+                            {/if}
+                            {post.metadata.title}
+                        </h3>
+                    </a>
+                {:else}
+                    <a href={`${base}/blog/${post.slug}`}>
+                        <h3>
+                            {#if post.metadata.emoji}
+                                {post.metadata.emoji}
+                            {/if}
+                            {post.metadata.title}
+                        </h3>
+                    </a>
+                {/if}
                 <time>{post.metadata.date}</time>
             </div>
         {/if}

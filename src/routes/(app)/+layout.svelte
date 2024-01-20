@@ -10,7 +10,6 @@
 <div class="markdown-body container">
     <main class="main">
         <slot />
-        <div class="empty-space" />
     </main>
     <Footer />
 </div>
@@ -27,17 +26,20 @@
 
     .main {
         flex: 1;
-        min-height: calc(100dvh - 2em - 6px);
+        min-height: calc(100dvh - 2em - 75px);
     }
 
-    .empty-space {
-        margin: 0 auto 4em auto;
+    @media (max-width: 1200px) {
+        .container {
+            max-width: 65vw;
+        }
     }
 
     @media (max-width: 768px) {
         .container {
             padding-left: 45px;
             padding-right: 45px;
+            max-width: 100vw;
         }
     }
 
@@ -55,7 +57,7 @@
         }
 
         .main {
-            min-height: calc(100dvh - 3.5em - 6px);
+            min-height: calc(100dvh - 4em - 75px);
         }
     }
 </style>
