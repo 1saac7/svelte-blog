@@ -1,8 +1,12 @@
 <script>
     import { siteConfig } from '$lib/js/config'
+    import Social from '$lib/components/Social.svelte'
 </script>
 
 <footer>
+    <div class="social-icons">
+        <Social />
+    </div>
     <div class="footer">
         <div class="msg">
             © 2024 {siteConfig.author}.
@@ -21,24 +25,26 @@
 </footer>
 
 <style>
-    @media (max-width: 768px) {
-        .footer {
-            text-align: center;
-        }
+    .footer {
+        text-align: center;
     }
 
     .footer {
         margin-bottom: 6px;
     }
 
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
     .msg {
         display: inline-block;
         white-space: nowrap;
         font-size: smaller;
-    }
-
-    .footer a {
-        text-decoration: none;
     }
 
     .footer a[href^="https://"]::after
