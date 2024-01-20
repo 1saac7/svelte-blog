@@ -7,6 +7,7 @@ export async function load({ params }) {
     const { slug } = params
     const { metadata, content } = process(`src/posts/${slug}.md`)
     if (metadata.error) throw error(404)
+    if (!metadata.gallery) throw error(404)
     const post = JSON.stringify({ metadata, content })
     return {
         post,

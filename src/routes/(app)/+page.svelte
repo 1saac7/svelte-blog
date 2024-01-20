@@ -1,7 +1,6 @@
 <script>
     import { siteConfig } from '$lib/js/config'
     import About from '$lib/components/About.svelte'
-    import Social from '$lib/components/Social.svelte'
     import Posts from '$lib/components/Posts.svelte'
     export let data
 </script>
@@ -11,8 +10,7 @@
     <meta name="description" content={siteConfig.description} />
 </svelte:head>
 
-<div>
+<div class="homepage">
     <About />
-    <Social />
     <Posts posts={data.posts} />
 </div>
