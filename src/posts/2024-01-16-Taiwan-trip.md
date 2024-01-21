@@ -5,7 +5,7 @@ date: 2024-01-16
 hide_title: False
 gallery: True
 images:
-    - url: https://isaacliang.imgix.net/skyline-of-taipei-winter-2023.jpeg?ch=Width%2CDPR&h=800&dpr=1&fit=max&auto=format&fm=png&q=100&s=5c0158cfc4e7a2f950fed59e44804bdd
+    - url: https://isaacliang.imgix.net/skyline-of-taipei-winter-2023.jpeg?ch=Width%2CDPR&w=800&dpr=1&fit=max&auto=format&fm=png&q=100&s=2f4ba1580d5ed83dbc40d131694b971a
       alt: Skyline of Taipei
       wide: False
     - url: https://isaacliang.imgix.net/skyline-of-taipei-nightview-winter-2023.jpeg?ch=Width%2CDPR&w=1200&dpr=1&fit=max&auto=format&fm=png&q=100&s=44d6c2ab343d887fe1b7e0b552b8ad99
