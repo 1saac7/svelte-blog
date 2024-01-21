@@ -14,6 +14,7 @@
             content="{post.metadata.title} written by {siteConfig.author}."
         />
     {/if}
+    <link rel="preload" as="image" href={post.metadata.images[0].url} />
 </svelte:head>
 
 {#if !post.metadata.hide_title}
@@ -57,7 +58,7 @@
         width: 100%;
         height: 100%;
         max-width: 50vw;
-        max-height: 75vh;
+        max-height: 85vh;
         object-fit: cover;
     }
 
@@ -65,7 +66,7 @@
         grid-column: span 2 / auto;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
         .gallery {
             grid-template-columns: 1fr 1fr;
         }
