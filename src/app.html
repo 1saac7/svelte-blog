@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ? document.firstElementChild.setAttribute('data-theme', 'dark')
+            : document.firstElementChild.setAttribute('data-theme', 'light')
+    </script>
     <head>
         %sveltekit.head%
     </head>

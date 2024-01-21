@@ -11,7 +11,7 @@
     <main class="main">
         <slot />
     </main>
-    <Footer />
+    <Footer noIcon="1" />
 </div>
 
 <style>
