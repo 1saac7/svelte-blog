@@ -2,6 +2,7 @@
     import '$lib/styles/color.css'
     import '$lib/styles/main.css'
     import Head from '$lib/components/Head.svelte'
+    import Social from '$lib/components/Social.svelte'
     import Footer from '$lib/components/Footer.svelte'
 </script>
 
@@ -11,6 +12,12 @@
     <main class="main">
         <slot />
     </main>
+    <div class="footer-icons">
+        <a href="/" title="Home">
+            <svg><use xlink:href="#home" /></svg>
+        </a>
+        <Social />
+    </div>
     <Footer />
 </div>
 
@@ -59,5 +66,29 @@
         .main {
             min-height: calc(100dvh - 4em - 75px);
         }
+    }
+
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-icons a {
+        transition: color 200ms;
+    }
+
+    .footer-icons a:hover {
+        color: var(--color-accent-fg);
+    }
+
+    .footer-icons svg {
+        width: 28px;
+        height: 28px;
+        margin: 0 0 0 8px;
+        overflow: visible !important;
+        fill: currentColor;
     }
 </style>

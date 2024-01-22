@@ -1,18 +1,8 @@
 <script>
     import { siteConfig } from '$lib/js/config'
-    import Social from '$lib/components/Social.svelte'
-    import ThemeSwitch from './ThemeSwitch.svelte'
 </script>
 
 <footer>
-    <div class="footer-icons">
-        <a href="/" title="Home">
-            <svg><use xlink:href="#home" /></svg>
-        </a>
-        <ThemeSwitch />
-        <Social />
-    </div>
-
     <div class="footer">
         <div class="footer-text">
             © 2024 {siteConfig.author}.
@@ -34,30 +24,6 @@
     .footer {
         text-align: center;
         margin-bottom: 6px;
-    }
-
-    .footer-icons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .footer-icons a {
-        transition: color 200ms;
-    }
-
-    .footer-icons a:hover {
-        color: var(--color-accent-fg);
-    }
-
-    .footer-icons svg {
-        width: 28px;
-        height: 28px;
-        margin: 0 0 0 8px;
-        overflow: visible !important;
-        fill: currentColor;
     }
 
     .footer-text {

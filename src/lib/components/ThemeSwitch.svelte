@@ -59,8 +59,8 @@
     }
 
     .theme-switch svg {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         overflow: visible !important;
         fill: currentColor;
     }
