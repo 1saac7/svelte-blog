@@ -1,30 +1,29 @@
 <script>
-    let darkMode = false
+    import { browser } from '$app/environment'
+    import { siteConfig } from '$lib/js/config'
 
-    import { onMount } from 'svelte'
+    let darkMode = siteConfig.defaultTheme === 'dark'
 
-    onMount(() => {
-        if (
-            localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            darkMode = true
+    let bgColor = darkMode ? '#232831' : '#ffffff'
+
+    if (browser) {
+        if ('theme' in localStorage) darkMode = localStorage.theme === 'dark'
+        else {
+            if (siteConfig.defaultTheme === 'system')
+                window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? (darkMode = true)
+                    : (darkMode = false)
         }
-    })
+        bgColor = darkMode ? '#232831' : '#ffffff'
+    }
 </script>
 
 <svelte:head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Accept-CH" content="Width,DPR" />
-    {#if darkMode}
-        <meta name="theme-color" content="#232831" />
-        <meta name="background-color" content="#232831" />
-    {:else}
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="background-color" content="#ffffff" />
-    {/if}
+    <meta name="theme-color" content={bgColor} />
+    <!-- <meta name="background-color" content={bgColor} /> -->
     <link rel="icon" href="/icons/favicon.ico" />
     <link rel="apple-touch-icon" href="/icons/favicon.png" />
 

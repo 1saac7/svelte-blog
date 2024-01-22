@@ -1,10 +1,11 @@
 <script>
     import { browser } from '$app/environment'
-    let darkMode = true
+    import { siteConfig } from '$lib/js/config'
+
+    let darkMode = siteConfig.defaultTheme === 'dark'
 
     function handleSwitchDarkMode() {
         darkMode = !darkMode
-
         localStorage.setItem('theme', darkMode ? 'dark' : 'light')
 
         if (darkMode) {
@@ -12,32 +13,25 @@
             document
                 .querySelector('meta[name="theme-color"]')
                 .setAttribute('content', '#232831')
-            document
-                .querySelector('meta[name="background-color"]')
-                .setAttribute('content', '#232831')
         } else {
             document.firstElementChild.setAttribute('data-theme', 'light')
             document
                 .querySelector('meta[name="theme-color"]')
                 .setAttribute('content', '#ffffff')
-            document
-                .querySelector('meta[name="background-color"]')
-                .setAttribute('content', '#ffffff')
         }
     }
 
     if (browser) {
-        if (
-            localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            document.firstElementChild.setAttribute('data-theme', 'dark')
-            darkMode = true
-        } else {
-            document.firstElementChild.setAttribute('data-theme', 'light')
-            darkMode = false
-        }
+        if (!('theme' in localStorage)) {
+            if (siteConfig.defaultTheme === 'system')
+                window.matchMedia('(prefers-color-scheme: dark)').matches
+                    ? (darkMode = true)
+                    : (darkMode = false)
+            localStorage.setItem('theme', darkMode ? 'dark' : 'light')
+        } else
+            localStorage.theme === 'dark'
+                ? (darkMode = true)
+                : (darkMode = false)
     }
 </script>
 

@@ -1,20 +1,18 @@
 <script>
     import { siteConfig } from '$lib/js/config'
     import Social from '$lib/components/Social.svelte'
-    import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
-    export let noIcon
+    import ThemeSwitch from './ThemeSwitch.svelte'
 </script>
 
 <footer>
-    {#if !noIcon}
-        <div class="footer-icons">
-            <a href="/" title="Home">
-                <svg><use xlink:href="#home" /></svg>
-            </a>
+    <div class="footer-icons">
+        <a href="/" title="Home">
+            <svg><use xlink:href="#home" /></svg>
+        </a>
+        <ThemeSwitch />
+        <Social />
+    </div>
 
-            <Social />
-        </div>
-    {/if}
     <div class="footer">
         <div class="footer-text">
             © 2024 {siteConfig.author}.
