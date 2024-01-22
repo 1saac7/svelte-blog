@@ -17,7 +17,8 @@
             document.firstElementChild.setAttribute('data-theme', 'light')
             document
                 .querySelector('meta[name="theme-color"]')
-                .setAttribute('content', '#ffffff')
+                .setAttribute('content', '#feffff')
+            // Jan 2024: Setting #ffffff will cause safari ignoring the change
         }
     }
 
