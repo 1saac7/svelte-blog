@@ -23,6 +23,7 @@
 <style>
     .footer {
         text-align: center;
+        margin-top: 6px;
         margin-bottom: 6px;
     }
 

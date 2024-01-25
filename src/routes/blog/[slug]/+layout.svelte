@@ -2,7 +2,6 @@
     import '$lib/styles/color.css'
     import '$lib/styles/main.css'
     import Head from '$lib/components/Head.svelte'
-    import Social from '$lib/components/Social.svelte'
     import Footer from '$lib/components/Footer.svelte'
 </script>
 
@@ -16,7 +15,6 @@
         <a href="/" title="Home">
             <svg><use xlink:href="#home" /></svg>
         </a>
-        <Social />
     </div>
     <Footer />
 </div>
@@ -87,8 +85,8 @@
     .footer-icons svg {
         width: 28px;
         height: 28px;
-        margin: 0 0 0 8px;
         overflow: visible !important;
         fill: currentColor;
+        stroke: currentColor;
     }
 </style>

@@ -3,17 +3,6 @@
 </script>
 
 <div class="social-icons">
-    {#if siteConfig.social_github}
-        <a
-            href={siteConfig.social_github}
-            target="_blank"
-            rel="noopener noreferrer me"
-            title="View source on GitHub"
-        >
-            <svg><use xlink:href="#github"> </use></svg>
-        </a>
-    {/if}
-
     {#if siteConfig.social_unsplash}
         <a
             href={siteConfig.social_unsplash}
@@ -22,6 +11,17 @@
             title="Unsplash profile"
         >
             <svg><use xlink:href="#unsplash"> </use></svg>
+        </a>
+    {/if}
+
+    {#if siteConfig.social_github}
+        <a
+            href={siteConfig.social_github}
+            target="_blank"
+            rel="noopener noreferrer me"
+            title="View source on GitHub"
+        >
+            <svg><use xlink:href="#github"> </use></svg>
         </a>
     {/if}
 
@@ -63,10 +63,11 @@
     }
 
     .social-icons svg {
-        width: 28px;
-        height: 28px;
-        margin: 0 0 0 8px;
+        width: 32px;
+        height: 32px;
+        margin: 0 0 0 10px;
         overflow: visible !important;
         fill: currentColor;
+        stroke: currentColor;
     }
 </style>
