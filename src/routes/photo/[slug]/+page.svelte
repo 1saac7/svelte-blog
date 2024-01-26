@@ -2,6 +2,15 @@
     import { siteConfig } from '$lib/js/config'
     export let data
     $: post = JSON.parse(data.post)
+    import { onMount } from 'svelte'
+
+    onMount(() => {
+        let c = 0
+        JSON.parse(data.post).metadata.images.forEach((image) => {
+            document.getElementById(c).src = image.url
+            c += 1
+        })
+    })
 </script>
 
 <svelte:head>
@@ -22,16 +31,22 @@
 {/if}
 
 <div class="gallery">
-    {#each post.metadata.images as image}
+    {#each post.metadata.images as image, index}
         {#if image.wide}
             <img
+                id={index}
                 loading="lazy"
                 class="wide-image"
-                src={image.url}
+                src="/images/placeholder.png"
                 alt={image.alt}
             />
         {:else}
-            <img loading="lazy" src={image.url} alt={image.alt} />
+            <img
+                id={index}
+                loading="lazy"
+                src="/images/placeholder.png"
+                alt={image.alt}
+            />
         {/if}
     {/each}
 </div>
@@ -66,6 +81,7 @@
         max-width: 50vw;
         max-height: 85vh;
         object-fit: cover;
+        background-color: var(--color-canvas-default);
     }
 
     img.wide-image {

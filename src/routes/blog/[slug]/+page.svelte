@@ -43,7 +43,7 @@
     .postpage {
         margin: 0 auto;
         padding: 8px 64px 0 64px;
-        max-width: 768px;
+        max-width: 896px;
         min-width: 200px;
     }
 
@@ -74,7 +74,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .footer-icons a {

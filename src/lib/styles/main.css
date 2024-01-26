@@ -120,7 +120,9 @@ a {
    text-decoration-color: var(--color-fg-default);
    text-decoration-thickness: 1px;
    text-decoration-skip-ink: auto;
-   transition: text-decoration-color 200ms, text-decoration-thickness 200ms;
+   transition-property: text-decoration-color, text-decoration-thickness;
+   transition-duration: 200ms;
+   transition-timing-function: ease-in-out;
 }
 
 a:hover {
