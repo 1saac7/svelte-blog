@@ -6,12 +6,7 @@ hidden: True
 hide_date: True
 ---
 
-Test pages:
-
--   [Basic test](/blog/test-basic)
--   [Long test](/blog/test-long)
--   [Short test](/blog/test-short)
--   [Code test](/blog/test-code)
+This blogging site is built with SvelteKit, it supports Markdown parsing, code syntax highlighting, and LaTeX math expression. Feel free to use, modify, upgrade, and share this project. To deploy, copy the [repo](https://github.com/1saac7/svelte-blog) and follow the instruction from [SvelteKit Docs](https://kit.svelte.dev/docs/introduction).
 
 Site source code license: [MIT](https://opensource.org/license/mit/)
 
@@ -21,7 +16,24 @@ CSS based on [sindresorhus/github-markdown-css](https://github.com/sindresorhus/
 
 Markdown parser based on [svelteland/svelte-kit-blog-demo](https://github.com/svelteland/svelte-kit-blog-demo)
 
-Dark / Light theme follows your system setting, you can change it on the fly.
+Test pages:
+
+-   [Basic test](/blog/test-basic)
+-   [Long test](/blog/test-long)
+-   [Short test](/blog/test-short)
+-   [Code test](/blog/test-code)
+
+Markdown post frontmatter format:
+
+| Key           | Type        | Notes                                                                              |
+| :------------ | :---------- | :--------------------------------------------------------------------------------- |
+| `title`       | `string`    | Necessary, post title, also used as SEO (meta tag) if `description` below is empty |
+| `date`        | `timestamp` | Necessary, published date                                                          |
+| `description` | `string`    | Optional, description for SEO (meta tag)                                           |
+| `emoji`       | `string`    | Optional, emoji displayed together with post title on home page                    |
+| `hidden`      | `boolean`   | Optional, set to `True` to hide post from home page                                |
+| `hide_title`  | `boolean`   | Optional, set to `True` to hide title at the beginning of a post                   |
+| `hide_date`   | `boolean`   | Optional, set to `True` to hide published date at the end of a post                |
 
 Project structure:
 
@@ -34,7 +46,8 @@ src
 │   │   ├── Footer.svelte
 │   │   ├── Head.svelte
 │   │   ├── Posts.svelte
-│   │   └── Social.svelte
+│   │   ├── Social.svelte
+│   │   └── ThemeSwitch.svelte
 │   ├── js
 │   │   ├── config.js
 │   │   └── parser.js
@@ -52,20 +65,11 @@ src
     │   └── [slug]
     │       ├── +page.server.js
     │       └── +page.svelte
-    └── manifest.webmanifest
-        └── +server.js
+    ├── manifest.webmanifest
+    │   └── +server.js
+    └── photo
+        └── [slug]
+            ├── +page.server.js
+            └── +page.svelte
+
 ```
-
-Markdown post frontmatter format:
-
-| Key           | Type        | Notes                                                                              |
-| :------------ | :---------- | :--------------------------------------------------------------------------------- |
-| `title`       | `string`    | Necessary, post title, also used as SEO (meta tag) if `description` below is empty |
-| `date`        | `timestamp` | Necessary, published date                                                          |
-| `description` | `string`    | Optional, description for SEO (meta tag)                                           |
-| `emoji`       | `string`    | Optional, emoji displayed together with post title on home page                    |
-| `hidden`      | `boolean`   | Optional, set to `True` to hide post from home page                                |
-| `hide_title`  | `boolean`   | Optional, set to `True` to hide title at the beginning of a post                   |
-| `hide_date`   | `boolean`   | Optional, set to `True` to hide published date at the end of a post                |
-
-Feel free to use, modify, upgrade, and share this project. To deploy, copy the [repo](https://github.com/1saac7/svelte-blog) and follow the instruction from [SvelteKit Docs](https://kit.svelte.dev/docs/introduction).
