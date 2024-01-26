@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+        if ('theme' in localStorage)
+            localStorage.theme === 'light'
+                ? document.firstElementChild.setAttribute('data-theme', 'light')
+                : document.firstElementChild.setAttribute('data-theme', 'dark')
+        else {
+            // Default, select one, comment the other two
+            // document.firstElementChild.setAttribute('data-theme', 'light') // Light
+            document.firstElementChild.setAttribute('data-theme', 'dark') // Dark
+            // window.matchMedia('(prefers-color-scheme: dark)').matches // System
+            //     ? document.firstElementChild.setAttribute('data-theme', 'dark')
+            //    : document.firstElementChild.setAttribute('data-theme', 'light')
+        }
+    </script>
     <head>
         %sveltekit.head%
     </head>
-    <body data-sveltekit-preload-data="tap">
+    <body data-sveltekit-preload-data="hover">
         <div style="display: contents">%sveltekit.body%</div>
     </body>
 </html>

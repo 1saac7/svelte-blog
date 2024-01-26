@@ -2,6 +2,15 @@
     import { siteConfig } from '$lib/js/config'
     export let data
     $: post = JSON.parse(data.post)
+    import { onMount } from 'svelte'
+
+    onMount(() => {
+        let c = 0
+        JSON.parse(data.post).metadata.images.forEach((image) => {
+            document.getElementById(c).src = image.url
+            c += 1
+        })
+    })
 </script>
 
 <svelte:head>
@@ -14,6 +23,7 @@
             content="{post.metadata.title} written by {siteConfig.author}."
         />
     {/if}
+    <link rel="preload" as="image" href={post.metadata.images[0].url} />
 </svelte:head>
 
 {#if !post.metadata.hide_title}
@@ -21,18 +31,30 @@
 {/if}
 
 <div class="gallery">
-    {#each post.metadata.images as image}
+    {#each post.metadata.images as image, index}
         {#if image.wide}
             <img
+                id={index}
                 loading="lazy"
                 class="wide-image"
-                src={image.url}
+                src="/images/placeholder.png"
                 alt={image.alt}
             />
         {:else}
-            <img loading="lazy" src={image.url} alt={image.alt} />
+            <img
+                id={index}
+                loading="lazy"
+                src="/images/placeholder.png"
+                alt={image.alt}
+            />
         {/if}
     {/each}
+</div>
+
+<div class="footer-icons">
+    <a href="/" title="Home">
+        <svg><use xlink:href="#home" /></svg>
+    </a>
 </div>
 
 <style>
@@ -57,22 +79,23 @@
         width: 100%;
         height: 100%;
         max-width: 50vw;
-        max-height: 75vh;
+        max-height: 85vh;
         object-fit: cover;
+        background-color: var(--color-canvas-default);
     }
 
     img.wide-image {
         grid-column: span 2 / auto;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
         .gallery {
             grid-template-columns: 1fr 1fr;
         }
 
         img {
             max-width: 100vw;
-            max-height: 100vh;
+            max-height: 98vh;
         }
     }
 
@@ -85,5 +108,29 @@
         img.wide-image {
             grid-column: auto;
         }
+    }
+
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-icons a {
+        transition: color 200ms;
+    }
+
+    .footer-icons a:hover {
+        color: var(--color-accent-fg);
+    }
+
+    .footer-icons svg {
+        width: 28px;
+        height: 28px;
+        overflow: visible !important;
+        fill: currentColor;
+        stroke: currentColor;
     }
 </style>
