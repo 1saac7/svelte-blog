@@ -6,7 +6,6 @@
 </script>
 
 <Head />
-
 <div class="container">
     <main class="main">
         <slot />
@@ -16,9 +15,6 @@
 
 <style>
     .container {
-        margin: 0 auto;
-        max-width: 100vw;
-        min-width: 200px;
         display: flex;
         flex-direction: column;
     }
@@ -26,5 +22,11 @@
     .main {
         flex: 1;
         min-height: calc(100dvh - 2em - 6px);
+    }
+
+    @media (max-width: 414px) {
+        .main {
+            min-height: calc(100dvh - 3.5em - 6px);
+        }
     }
 </style>

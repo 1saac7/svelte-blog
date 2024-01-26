@@ -36,6 +36,12 @@
     {/each}
 </div>
 
+<div class="footer-icons">
+    <a href="/" title="Home">
+        <svg><use xlink:href="#home" /></svg>
+    </a>
+</div>
+
 <style>
     .title {
         position: absolute;
@@ -73,7 +79,7 @@
 
         img {
             max-width: 100vw;
-            max-height: 100vh;
+            max-height: 98vh;
         }
     }
 
@@ -86,5 +92,29 @@
         img.wide-image {
             grid-column: auto;
         }
+    }
+
+    .footer-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-icons a {
+        transition: color 200ms;
+    }
+
+    .footer-icons a:hover {
+        color: var(--color-accent-fg);
+    }
+
+    .footer-icons svg {
+        width: 28px;
+        height: 28px;
+        overflow: visible !important;
+        fill: currentColor;
+        stroke: currentColor;
     }
 </style>
