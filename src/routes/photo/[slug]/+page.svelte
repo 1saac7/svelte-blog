@@ -1,8 +1,16 @@
 <script>
+    import { onMount } from 'svelte'
     import { siteConfig } from '$lib/js/config'
     import LazyImage from '$lib/components/LazyImage.svelte'
+
     export let data
+
     $: post = JSON.parse(data.post)
+    let hasAPI = true
+
+    onMount(() => {
+        const hasAPI = 'IntersectionObserver' in window
+    })
 </script>
 
 <svelte:head>
@@ -24,7 +32,7 @@
 
 <div class="gallery">
     {#each post.metadata.images as image, index}
-        <LazyImage {image} lazy={index > 2} />
+        <LazyImage {image} lazy={hasAPI && index > 2} />
     {/each}
 </div>
 

@@ -13,13 +13,18 @@
         node.onload = function () {
             if (lazy) {
                 node.style.opacity = '0.5'
-                observer = new IntersectionObserver((entries) => {
-                    if (entries[0].isIntersecting) {
-                        observer.unobserve(node)
-                        src = image.url
-                        node.style.opacity = '1'
+                observer = new IntersectionObserver(
+                    (entries) => {
+                        if (entries[0].isIntersecting) {
+                            observer.unobserve(node)
+                            src = image.url
+                            node.style.opacity = '1'
+                        }
+                    },
+                    {
+                        rootMargin: '200px',
                     }
-                })
+                )
                 observer.observe(node)
                 return () => observer.unobserve(node)
             }
