@@ -1,16 +1,8 @@
 <script>
     import { siteConfig } from '$lib/js/config'
+    import LazyImage from '$lib/components/LazyImage.svelte'
     export let data
     $: post = JSON.parse(data.post)
-    import { onMount } from 'svelte'
-
-    onMount(() => {
-        let c = 0
-        JSON.parse(data.post).metadata.images.forEach((image) => {
-            document.getElementById(c).src = image.url
-            c += 1
-        })
-    })
 </script>
 
 <svelte:head>
@@ -32,22 +24,7 @@
 
 <div class="gallery">
     {#each post.metadata.images as image, index}
-        {#if image.wide}
-            <img
-                id={index}
-                loading="lazy"
-                class="wide-image"
-                src="/images/placeholder.png"
-                alt={image.alt}
-            />
-        {:else}
-            <img
-                id={index}
-                loading="lazy"
-                src="/images/placeholder.png"
-                alt={image.alt}
-            />
-        {/if}
+        <LazyImage {image} lazy={index > 2} />
     {/each}
 </div>
 
@@ -75,27 +52,9 @@
         grid-auto-flow: dense;
     }
 
-    img {
-        width: 100%;
-        height: 100%;
-        max-width: 50vw;
-        max-height: 85vh;
-        object-fit: cover;
-        background-color: var(--color-canvas-default);
-    }
-
-    img.wide-image {
-        grid-column: span 2 / auto;
-    }
-
     @media screen and (max-width: 1200px) {
         .gallery {
             grid-template-columns: 1fr 1fr;
-        }
-
-        img {
-            max-width: 100vw;
-            max-height: 98vh;
         }
     }
 
@@ -103,10 +62,6 @@
         /* changes the grid layout to a single column */
         .gallery {
             grid-template-columns: 1fr;
-        }
-
-        img.wide-image {
-            grid-column: auto;
         }
     }
 
@@ -130,7 +85,7 @@
         width: 28px;
         height: 28px;
         overflow: visible !important;
-        fill: currentColor;
-        stroke: currentColor;
+        fill: currentcolor;
+        stroke: currentcolor;
     }
 </style>
