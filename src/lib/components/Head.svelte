@@ -26,7 +26,13 @@
     <!-- <meta name="background-color" content={bgColor} /> -->
     <link rel="icon" href="/icons/favicon.ico" />
     <link rel="apple-touch-icon" href="/icons/favicon.png" />
-
+    <link
+        rel="preload"
+        href="/fonts/Figtree.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+    />
     <link rel="manifest" href="/manifest.webmanifest" />
 </svelte:head>
 
