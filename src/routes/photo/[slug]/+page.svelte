@@ -1,16 +1,7 @@
 <script>
-    import { onMount } from 'svelte'
     import { siteConfig } from '$lib/js/config'
-    import LazyImage from '$lib/components/LazyImage.svelte'
-
     export let data
-
     $: post = JSON.parse(data.post)
-    let hasAPI = true
-
-    onMount(() => {
-        const hasAPI = 'IntersectionObserver' in window
-    })
 </script>
 
 <svelte:head>
@@ -23,7 +14,6 @@
             content="{post.metadata.title} written by {siteConfig.author}."
         />
     {/if}
-    <link rel="preload" as="image" href={post.metadata.images[0].url} />
 </svelte:head>
 
 {#if !post.metadata.hide_title}
@@ -31,8 +21,25 @@
 {/if}
 
 <div class="gallery">
-    {#each post.metadata.images as image, index}
-        <LazyImage {image} lazy={hasAPI && index > 2} />
+    {#each post.metadata.images as image}
+        {#if image.wide}
+            <img
+                loading="lazy"
+                class="wide-image"
+                srcset={`${image.small_url} 800w, ${image.url} 1800w`}
+                sizes="(max-width: 600px) 1px, 1200px"
+                src={image.small_url}
+                alt={image.alt}
+            />
+        {:else}
+            <img
+                loading="lazy"
+                srcset={`${image.small_url} 800w, ${image.url} 1200w`}
+                sizes="(max-width: 1000px) 1px, 1200px"
+                src={image.small_url}
+                alt={image.alt}
+            />
+        {/if}
     {/each}
 </div>
 
@@ -60,16 +67,53 @@
         grid-auto-flow: dense;
     }
 
-    @media screen and (max-width: 1200px) {
+    img {
+        width: 100%;
+        height: 100%;
+        max-width: 50vw;
+        min-height: 49vh;
+        object-fit: cover;
+        background-color: var(--color-canvas-default);
+    }
+
+    img.wide-image {
+        grid-column: span 2 / auto;
+    }
+
+    @media screen and (max-width: 1536px) and (max-aspect-ratio: 8/5) {
         .gallery {
             grid-template-columns: 1fr 1fr;
         }
+
+        img {
+            max-width: 100vw;
+            max-height: 100vh;
+        }
     }
 
-    @media screen and (max-width: 480px) {
-        /* changes the grid layout to a single column */
+    @media screen and (max-width: 1536px) and (min-aspect-ratio: 8/5) {
+        .gallery {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        img {
+            max-height: auto;
+        }
+
+        img.wide-image {
+            max-width: 75vw;
+            grid-column: span 2 / auto;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
         .gallery {
             grid-template-columns: 1fr;
+        }
+
+        img.wide-image {
+            grid-column: auto;
+            min-height: 33vh;
         }
     }
 

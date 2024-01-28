@@ -21,7 +21,6 @@
 <svelte:head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Accept-CH" content="Width,DPR" />
     <meta name="theme-color" content={bgColor} />
     <!-- <meta name="background-color" content={bgColor} /> -->
     <link rel="icon" href="/icons/favicon.ico" />
