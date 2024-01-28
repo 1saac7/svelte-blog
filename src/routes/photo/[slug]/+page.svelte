@@ -80,40 +80,24 @@
         grid-column: span 2 / auto;
     }
 
-    @media screen and (max-width: 1536px) and (max-aspect-ratio: 8/5) {
+    @media screen and (max-width: 1536px) {
         .gallery {
             grid-template-columns: 1fr 1fr;
         }
 
         img {
             max-width: 100vw;
-            max-height: 100vh;
         }
     }
 
-    @media screen and (max-width: 1536px) and (min-aspect-ratio: 8/5) {
-        .gallery {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        img {
-            max-height: auto;
-        }
-
-        img.wide-image {
-            max-width: 75vw;
-            grid-column: span 2 / auto;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) and (max-aspect-ratio: 8/5) {
         .gallery {
             grid-template-columns: 1fr;
         }
 
         img.wide-image {
             grid-column: auto;
-            min-height: 33vh;
+            min-height: 40vh;
         }
     }
 
