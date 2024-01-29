@@ -4,8 +4,7 @@ export const siteConfig = {
     author: 'Isaac Liang',
     github: 'https://github.com/1saac7',
     defaultTheme: 'dark', // 'dark' | 'light' | 'system', remember to change app.html as well
-    description:
-        'The space for Isaac to note down random thoughts, write articles, record tech docs, and share interesting findings.',
+    description: 'Personal blog.',
     footerMsg: 'I use Arch Linux.',
     social_github: 'https://github.com/1saac7/svelte-blog',
     social_email: '',
