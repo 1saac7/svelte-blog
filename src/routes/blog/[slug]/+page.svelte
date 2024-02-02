@@ -43,7 +43,7 @@
     .postpage {
         margin: 0 auto;
         padding: 8px 64px 0 64px;
-        max-width: 896px;
+        max-width: 768px;
         min-width: 200px;
     }
 

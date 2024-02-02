@@ -31,6 +31,7 @@
 
     .toolbar {
         display: flex;
+        margin-top: 1.3em;
     }
 
     @media (max-width: 1200px) {

@@ -36,7 +36,7 @@
 
 <style>
     .post-list {
-        margin-top: 2.8em;
+        margin-top: 2em;
     }
 
     .post-list h4 {
@@ -47,8 +47,8 @@
     }
 
     .post-entry {
-        margin: 0 0 2.2em 0;
-        padding-left: 8px;
+        margin: 0 0 0.7em 0;
+        padding: 0.3em 0 1.5em 8px;
     }
 
     .post-entry a {
@@ -74,5 +74,18 @@
         display: block;
         font-size: 85%;
         color: var(--color-fg-subtle);
+    }
+
+    @media (max-width: 414px) {
+        .post-entry {
+            padding: 0.8em 0 1em 8px;
+            background-color: var(--color-canvas-subtle);
+            border: 1.5px solid;
+            border-color: var(--color-border-default);
+            border-radius: 10px;
+            transition-property: background-color, border-color;
+            transition-duration: 200ms;
+            transition-timing-function: ease-in-out;
+        }
     }
 </style>
