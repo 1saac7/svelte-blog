@@ -76,9 +76,9 @@
         color: var(--color-fg-subtle);
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: 768px) {
         .post-entry {
-            padding: 0.8em 0 1em 8px;
+            padding: 0.8em 16px 1em 16px;
             background-color: var(--color-canvas-subtle);
             border: 1.5px solid;
             border-color: var(--color-border-default);
@@ -86,6 +86,10 @@
             transition-property: background-color, border-color;
             transition-duration: 200ms;
             transition-timing-function: ease-in-out;
+        }
+
+        .post-entry h3 {
+            display: block;
         }
     }
 </style>
