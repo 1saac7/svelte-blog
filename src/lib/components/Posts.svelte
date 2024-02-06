@@ -72,13 +72,13 @@
 
     .post-entry time {
         display: block;
-        font-size: 85%;
+        font-size: 75%;
         color: var(--color-fg-subtle);
     }
 
     @media (max-width: 768px) {
         .post-entry {
-            padding: 0.8em 16px 1em 16px;
+            padding: 0.6em 16px 0.35em 16px;
             background-color: var(--color-canvas-subtle);
             border: 1.5px solid;
             border-color: var(--color-border-default);
@@ -90,6 +90,8 @@
 
         .post-entry h3 {
             display: block;
+            font-size: 1.3em;
+            margin-bottom: 0.35em;
         }
     }
 </style>

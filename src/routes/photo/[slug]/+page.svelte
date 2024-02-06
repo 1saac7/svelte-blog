@@ -71,7 +71,7 @@
         width: 100%;
         height: 100%;
         max-width: 50vw;
-        min-height: 49vh;
+        min-height: 49svh;
         object-fit: cover;
         background-color: var(--color-canvas-default);
     }
@@ -97,7 +97,7 @@
 
         img.wide-image {
             grid-column: auto;
-            min-height: 40vh;
+            min-height: 40svh;
         }
     }
 
